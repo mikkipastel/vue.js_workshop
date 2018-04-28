@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app-4">
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }} : {{ todo.duration}}
+      </li>
+    </ol>
+
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text + ' : ' +  todo.duration + ' hours'}}
+      </li>
+    </ol>
+  </div>
+
+  <script>
+    var app4 = new Vue({
+      el: '#app-4',
+      data: {
+        todos: [
+          { text: 'Learn JavaScript', duration: 100 },
+          { text: 'Learn Vue', duration: 12 },
+          { text: 'Build something awesome', duration: 50 },
+          { text: 'Listen Fungjai Playlist', duration: 1 }
+        ]
+      }
+    })
+  </script>
+</body>
+</html>

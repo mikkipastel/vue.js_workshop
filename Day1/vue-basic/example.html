@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app">
+    {{ sum }}
+    <input v-model.number="num1">
+    <input v-model.number="num2">
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        num1: '',
+        num2: ''
+      },
+      computed: {
+        sum: function() {
+          return this.num1 + this.num2
+        }
+      }
+    })
+  </script>
+</body>
+</html>
