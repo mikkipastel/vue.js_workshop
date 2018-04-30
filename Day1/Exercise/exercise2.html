@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app">
+    <p>{{ num }}</p>
+    <br>
+    <button v-on:click="plus">+</button>
+    <button v-on:click="minus">-</button>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        num: 10
+      },
+      methods: {
+        plus: function() {
+          this.num = this.num + 1
+        },
+        minus: function() {
+          this.num = this.num - 1
+        }
+      }
+    })
+  </script>
+</body>
+</html>
